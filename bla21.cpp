@@ -61,7 +61,8 @@ void BLA21::SetProperty(Serial* serial, int canId, int index, int value){
 	gs.val   = value;
 
 	char tmp[5];
-	sprintf(tmp, "0x%02x", gs.index);
+	// this part must be Capital Hex !
+	sprintf(tmp, "0x%02X", gs.index);
 	strncpy(gs.name, tmp, 4);
 
 	const int sz = sizeof(GetSet);
