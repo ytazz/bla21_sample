@@ -1,16 +1,6 @@
 #include "serial.h"
 #include "bla21.h"
 
-/**
- *  Futaba BLA21 sample code
- * 
- *  author: ytazz (github.com/ytazz)
- * 
- *  -- unofficial. no guarantee whatsoever --
- *  -- tested with BLA21, Windows 10, Visual Studio 2019, Zubax Babel USB-CAN adaptor
- * 
- **/
-
 int main(int argc, char** argv){
 	int  portno;
 	char port[256];
