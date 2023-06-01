@@ -30,6 +30,10 @@ struct Float16{
 			sign = 0;
 		}
 		int exponent = (int)floor(log(val)/log(2.0));
+		
+		// must limit range of exponent
+		exponent = std::min(std::max(-15, exponent), 15);
+		
 		int fraction = (int)(1024.0f*(val/pow(2.0, exponent) - 1.0f));
 
 		return (sign << 15) | (((exponent + 15) & 0x1f) << 10) | (fraction & 0x3ff);
